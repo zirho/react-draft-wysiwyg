@@ -1,5 +1,5 @@
 {
-  "name": "react-draft-wysiwyg",
+  "name": "rdw-i18n",
   "version": "0.0.0",
   "description": "Internationalization package for react-draft-wysiwyg.",
   "main": "dist/i18n.js",

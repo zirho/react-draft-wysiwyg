@@ -29,7 +29,7 @@ import superscript from '../../images/superscript.svg';
 * whatever user passes in toolbar property is deeply merged with this to over-ride defaults.
 */
 export default {
-  options: ['inline', 'blockType', 'fontSize', 'fontFamily', 'list', 'textAlign', 'colorPicker', 'link', 'embedded', 'emoji', 'image', 'remove', 'history'],
+  options: ['inline', 'fontSize', 'fontFamily', 'list', 'textAlign', 'colorPicker', 'link', 'embedded', 'emoji', 'image', 'remove', 'history'],
   inline: {
     inDropdown: false,
     className: undefined,
@@ -43,14 +43,6 @@ export default {
     monospace: { icon: monospace, className: undefined, title: 'Monospace' },
     superscript: { icon: superscript, className: undefined, title: 'Superscript' },
     subscript: { icon: subscript, className: undefined, title: 'Subscript' },
-  },
-  blockType: {
-    inDropdown: true,
-    options: ['Normal', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'Blockquote'],
-    className: undefined,
-    component: undefined,
-    dropdownClassName: undefined,
-    title: 'Block Type',
   },
   fontSize: {
     icon: fontSize,

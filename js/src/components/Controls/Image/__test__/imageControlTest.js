@@ -6,8 +6,8 @@ import {
   convertFromHTML,
   ContentState,
 } from 'draft-js';
-import { expect, assert } from 'chai'; // eslint-disable-line import/no-extraneous-dependencies
-import { mount } from 'enzyme'; // eslint-disable-line import/no-extraneous-dependencies
+import { expect, assert } from 'chai';
+import { mount } from 'enzyme';
 
 import ImageControl from '..';
 import defaultToolbar from '../../../config/defaultToolbar';

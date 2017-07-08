@@ -6,7 +6,8 @@ import pt from './pt';
 import ko from './ko';
 
 module.exports = {
-  translations: {en,
+  translations: {
+    en,
     fr,
     zh,
     ru,

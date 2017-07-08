@@ -1,9 +1,9 @@
 /* @flow */
 
 import React from 'react';
-import { expect } from 'chai'; // eslint-disable-line import/no-extraneous-dependencies
-import { spy } from 'sinon'; // eslint-disable-line import/no-extraneous-dependencies
-import { shallow, mount } from 'enzyme'; // eslint-disable-line import/no-extraneous-dependencies
+import { expect } from 'chai';
+import { spy } from 'sinon';
+import { shallow, mount } from 'enzyme';
 import Option from '..';
 
 describe('Option test suite', () => {

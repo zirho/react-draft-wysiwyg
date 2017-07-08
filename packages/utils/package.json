@@ -1,0 +1,22 @@
+{
+  "name": "rdw-utils",
+  "version": "0.0.0",
+  "description": "A shared set of utility functions for rdw packages.",
+  "main": "dist/utils.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpuri/react-draft-wysiwyg.git"
+  },
+  "author": "Jyoti Puri",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:webpack": "cross-env NODE_ENV=production webpack --config config/webpack.config.js",
+    "build": "npm run clean && npm run build:webpack",
+    "test": "cross-env BABEL_ENV=test mocha --compilers js:config/test-compiler.js config/test-setup.js js/**/*Test.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "rimraf": "^2.6.1"
+  }
+}

@@ -1,10 +1,8 @@
-/* @flow */
-
 import React, { Component } from 'react';
-import draftToHtml from 'draftjs-to-html'; // eslint-disable-line import/no-extraneous-dependencies
-import draftToMarkdown from 'draftjs-to-markdown'; // eslint-disable-line import/no-extraneous-dependencies
+import draftToHtml from 'draftjs-to-html';
+import draftToMarkdown from 'draftjs-to-markdown';
 import { convertToRaw, ContentState, EditorState } from 'draft-js';
-import { Editor } from '../packages/core/src';
+import { Editor } from '../../packages/core/src';
 
 const TestOption = () => <div>testing</div>;
 
@@ -60,20 +58,20 @@ class DemoEditor extends Component {
   render() {
     const { editorContent } = this.state;
     return (
-      <div className="playground-root">
-        <div className="playground-label">
+      <div className="rdw-root">
+        <div className="rdw-label">
           Toolbar is alwasy <sup>visible</sup>
         </div>
         <button onClick={this.clearContent} tabIndex={0}>Force Editor State</button>
-        <div className="playground-editorSection">
+        <div className="rdw-editorSection">
           <input tabIndex={0} />
-          <div className="playground-editorWrapper">
+          <div className="rdw-editorWrapper">
             <Editor
               tabIndex={0}
               hashtag={{}}
-              toolbarClassName="playground-toolbar"
-              wrapperClassName="playground-wrapper"
-              editorClassName="playground-editor"
+              toolbarClassName="rdw-toolbar"
+              wrapperClassName="rdw-wrapper"
+              editorClassName="rdw-editor"
               toolbar={{
                 history: { inDropdown: true },
                 inline: { inDropdown: false },
@@ -109,15 +107,15 @@ class DemoEditor extends Component {
           </div>
           <input tabIndex={0} />
           <textarea
-            className="playground-content no-focus"
+            className="rdw-content no-focus"
             value={draftToHtml(editorContent)}
           />
           <textarea
-            className="playground-content no-focus"
+            className="rdw-content no-focus"
             value={draftToMarkdown(editorContent)}
           />
           <textarea
-            className="playground-content no-focus"
+            className="rdw-content no-focus"
             value={JSON.stringify(editorContent)}
           />
         </div>

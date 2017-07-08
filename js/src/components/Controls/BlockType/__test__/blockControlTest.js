@@ -1,8 +1,8 @@
 /* @flow */
 
 import React from 'react';
-import { expect } from 'chai'; // eslint-disable-line import/no-extraneous-dependencies
-import { mount } from 'enzyme'; // eslint-disable-line import/no-extraneous-dependencies
+import { expect } from 'chai';
+import { mount } from 'enzyme';
 import {
   EditorState,
   convertFromHTML,

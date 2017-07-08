@@ -1,5 +1,4 @@
 import inline from './Inline';
-import blockType from './BlockType';
 import fontSize from './FontSize';
 import fontFamily from './FontFamily';
 import list from './List';
@@ -14,7 +13,6 @@ import history from './History';
 
 module.exports = {
   inline,
-  blockType,
   fontSize,
   fontFamily,
   list,

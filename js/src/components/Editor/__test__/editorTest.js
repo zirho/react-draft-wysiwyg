@@ -1,8 +1,8 @@
 /* @flow */
 
 import React from 'react';
-import { expect, assert } from 'chai'; // eslint-disable-line import/no-extraneous-dependencies
-import { shallow } from 'enzyme'; // eslint-disable-line import/no-extraneous-dependencies
+import { expect, assert } from 'chai';
+import { shallow } from 'enzyme';
 import Editor from '..';
 
 describe('Editor test suite', () => {

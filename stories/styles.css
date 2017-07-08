@@ -1,34 +1,34 @@
-.playground-root {
+.rdw-root {
   margin: 50px;
   width: 90%;
 }
-.playground-label {
+.rdw-label {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 20px;
 }
-.playground-editorSection {
+.rdw-editorSection {
   display: flex;
   margin-top: 150px;
   justify-content: space-between;
 }
-.playground-wrapper {
+.rdw-wrapper {
   height: 400px;
   width: 600px;
 }
-.playground-editor {
+.rdw-editor {
   border: 1px solid #F1F1F1;
   padding: 5px;
   border-radius: 2px;
-  height: 95%;
+  height: 50%;
 }
-.playground-editorWrapper {
+.rdw-editorWrapper {
 }
-.playground-toolbar {
-  width: 100%;
+.rdw-toolbar {
+  width: 98%;
   top: -130px;
 }
-.playground-content {
+.rdw-content {
   border: 1px solid #F1F1F1;
   padding: 5px;
   border-radius: 5px;

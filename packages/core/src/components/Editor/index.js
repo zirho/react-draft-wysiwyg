@@ -413,16 +413,16 @@ export default class WysiwygEditor extends Component {
             aria-hidden={(!editorFocused && toolbarOnFocus).toString()}
             onFocus={this.onToolbarFocus}
           >
-            {toolbar.options.map((opt, index) => {
-              const Control = Controls[opt];
-              const config = toolbar[opt];
-              if (opt === 'image' && uploadCallback) {
-                config.uploadCallback = uploadCallback;
-              }
-              return <Control key={index} {...controlProps} config={config} />;
-            })}
-            {toolbarCustomButtons && toolbarCustomButtons.map((button, index) =>
+            {this.props.toolbarTempProp && this.props.toolbarTempProp.map((button, index) =>
               React.cloneElement(button, { key: index, ...controlProps }))}
+              { toolbar.options.map((opt, index) => {
+                const Control = Controls[opt];
+                const config = toolbar[opt];
+                if (opt === 'image' && uploadCallback) {
+                  config.uploadCallback = uploadCallback;
+                }
+                return <Control key={index} {...controlProps} config={config} />;
+              })}
           </div>
         }
         <div
