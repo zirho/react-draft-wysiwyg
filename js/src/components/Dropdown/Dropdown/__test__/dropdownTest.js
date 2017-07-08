@@ -5,7 +5,7 @@ import { expect } from 'chai'; // eslint-disable-line import/no-extraneous-depen
 import { shallow } from 'enzyme'; // eslint-disable-line import/no-extraneous-dependencies
 import Dropdown from '..';
 import DropdownOption from '../../DropdownOption';
-import ModalHandler from '../../../../event-handler/modals';
+import ModalHandler from '../../../event-handler/modals';
 
 describe('Dropdown test suite', () => {
   it('should have a div when rendered', () => {

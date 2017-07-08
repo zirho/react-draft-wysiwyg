@@ -9,9 +9,9 @@ import {
   ContentState,
 } from 'draft-js';
 import Block from '..';
-import defaultToolbar from '../../../../config/defaultToolbar';
-import ModalHandler from '../../../../event-handler/modals';
-import localeTranslations from '../../../../i18n';
+import defaultToolbar from '../../../config/defaultToolbar';
+import ModalHandler from '../../../event-handler/modals';
+import localeTranslations from '../../../i18n';
 
 describe('Block test suite', () => {
   const contentBlocks = convertFromHTML('<div>test</div>');

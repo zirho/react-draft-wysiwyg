@@ -9,8 +9,8 @@ import {
 import { expect } from 'chai'; // eslint-disable-line import/no-extraneous-dependencies
 import { mount } from 'enzyme'; // eslint-disable-line import/no-extraneous-dependencies
 import HistoryControl from '..';
-import defaultToolbar from '../../../../config/defaultToolbar';
-import ModalHandler from '../../../../event-handler/modals';
+import defaultToolbar from '../../../config/defaultToolbar';
+import ModalHandler from '../../../event-handler/modals';
 
 describe('HistoryControl test suite', () => {
   const contentBlocks = convertFromHTML('<div>test</div>');

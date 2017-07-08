@@ -10,8 +10,8 @@ import {
 } from 'draft-js';
 import FontSizeControl from '..';
 import { Dropdown } from '../../../Dropdown';
-import defaultToolbar from '../../../../config/defaultToolbar';
-import ModalHandler from '../../../../event-handler/modals';
+import defaultToolbar from '../../../config/defaultToolbar';
+import ModalHandler from '../../../event-handler/modals';
 
 describe('FontSizeControl test suite', () => {
   const contentBlocks = convertFromHTML('<div>test</div>');

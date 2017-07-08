@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { stopPropagation } from '../../../../utils/common';
+import { stopPropagation } from '../../../utils/common';
 import Option from '../../../Option';
 import './styles.css';
 

@@ -11,9 +11,9 @@ import {
 
 import FontFamilyControl from '..';
 import { Dropdown } from '../../../Dropdown';
-import defaultToolbar from '../../../../config/defaultToolbar';
-import ModalHandler from '../../../../event-handler/modals';
-import localeTranslations from '../../../../i18n';
+import defaultToolbar from '../../../config/defaultToolbar';
+import ModalHandler from '../../../event-handler/modals';
+import localeTranslations from '../../../i18n';
 
 describe('FontFamilyControl test suite', () => {
   const contentBlocks = convertFromHTML('<div>test</div>');

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './styles.css';
-import openlink from '../../../../images/openlink.svg';
+import openlink from '../../../images/openlink.svg';
 
 function findLinkEntities(contentBlock, callback, contentState) {
   contentBlock.findEntityRanges(

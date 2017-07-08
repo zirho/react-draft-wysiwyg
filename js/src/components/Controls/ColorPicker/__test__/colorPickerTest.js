@@ -10,8 +10,8 @@ import { expect, assert } from 'chai'; // eslint-disable-line import/no-extraneo
 import { mount } from 'enzyme'; // eslint-disable-line import/no-extraneous-dependencies
 
 import ColorPicker from '..';
-import defaultToolbar from '../../../../config/defaultToolbar';
-import ModalHandler from '../../../../event-handler/modals';
+import defaultToolbar from '../../../config/defaultToolbar';
+import ModalHandler from '../../../event-handler/modals';
 
 describe('ColorPicker test suite', () => {
   const contentBlocks = convertFromHTML('<div>test</div>');

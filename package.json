@@ -1,8 +1,7 @@
 {
-  "name": "react-draft-wysiwyg",
-  "version": "1.10.1",
-  "description": "A wysiwyg on top of DraftJS.",
-  "main": "dist/react-draft-wysiwyg.js",
+  "name": "react-draft-wysiwyg-packages",
+  "version": "0.0.0",
+  "description": "Packages for react-draft-wysiwyg, a wysiwyg on top of DraftJS.",
   "repository": {
     "type": "git",
     "url": "https://github.com/jpuri/react-draft-wysiwyg.git"
@@ -22,9 +21,6 @@
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
     "draft-js": "^0.10.1",
-    "draftjs-to-html": "^0.7.2",
-    "html-to-draftjs": "^0.1.0-beta7",
-    "draftjs-to-markdown": "^0.4.2",
     "enzyme": "^2.9.1",
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^15.0.1",
@@ -32,13 +28,12 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-mocha": "^4.11.0",
     "eslint-plugin-react": "^7.1.0",
-    "express": "^4.15.3",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
     "flow-bin": "^0.49.1",
-    "html-webpack-plugin": "^2.29.0",
     "immutable": "^4.0.0-rc.1",
     "jsdom": "^9.12.0",
+    "lerna": "^2.0.0-rc.5",
     "mocha": "^3.4.2",
     "postcss-loader": "^2.0.6",
     "precss": "^2.0.0",
@@ -58,21 +53,6 @@
     "draftjs-utils": "^0.7.5",
     "immutable": "^4.0.0-rc.1",
     "prop-types": "^15.5.10"
-  },
-  "peerDependencies": {
-    "draft-js": "^0.10.x",
-    "react": "0.13.x || 0.14.x || ^15.0.0-0 || 15.x.x",
-    "react-dom": "0.13.x || 0.14.x || ^15.0.0-0 || 15.x.x"
-  },
-  "scripts": {
-    "clean": "rimraf dist",
-    "build:webpack": "cross-env NODE_ENV=production webpack --config config/webpack.prod.config.js",
-    "build": "npm run clean && npm run build:webpack",
-    "test": "cross-env BABEL_ENV=test mocha --compilers js:config/test-compiler.js config/test-setup.js js/**/*Test.js",
-    "lint": "eslint js",
-    "flow": "flow; test $? -eq 0 -o $? -eq 2",
-    "check": "npm run lint && npm run flow",
-    "storybook": "start-storybook -p 9001"
   },
   "license": "MIT"
 }

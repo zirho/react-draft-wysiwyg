@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 import Option from '../../../Option';
 import { Dropdown, DropdownOption } from '../../../Dropdown';
-import { getFirstIcon } from '../../../../utils/toolbar';
+import { getFirstIcon } from '../../../utils/toolbar';
 import './styles.css';
 
 export default class TextAlign extends Component {

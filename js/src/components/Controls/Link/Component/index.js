@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { stopPropagation } from '../../../../utils/common';
-import { getFirstIcon } from '../../../../utils/toolbar';
+import { stopPropagation } from '../../../utils/common';
+import { getFirstIcon } from '../../../utils/toolbar';
 import Option from '../../../Option';
 import { Dropdown, DropdownOption } from '../../../Dropdown';
 import './styles.css';
