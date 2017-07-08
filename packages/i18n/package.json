@@ -1,0 +1,21 @@
+{
+  "name": "react-draft-wysiwyg",
+  "version": "0.0.0",
+  "description": "Internationalization package for react-draft-wysiwyg.",
+  "main": "dist/i18n.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpuri/react-draft-wysiwyg.git"
+  },
+  "author": "Jyoti Puri",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:webpack": "cross-env NODE_ENV=production webpack --config config/webpack.config.js",
+    "build": "npm run clean && npm run build:webpack"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "rimraf": "^2.6.1"
+  }
+}

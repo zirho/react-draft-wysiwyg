@@ -4,8 +4,7 @@ import React, { Component } from 'react';
 import draftToHtml from 'draftjs-to-html'; // eslint-disable-line import/no-extraneous-dependencies
 import draftToMarkdown from 'draftjs-to-markdown'; // eslint-disable-line import/no-extraneous-dependencies
 import { convertToRaw, ContentState, EditorState } from 'draft-js';
-import { Editor } from '../js/src';
-import './styles.css';
+import { Editor } from '../packages/core/src';
 
 const TestOption = () => <div>testing</div>;
 
@@ -127,4 +126,4 @@ class DemoEditor extends Component {
   }
 }
 
-export default DemoEditor; // eslint-disable-line no-undef
+export default DemoEditor;

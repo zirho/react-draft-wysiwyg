@@ -46,7 +46,11 @@
     "url-loader": "^0.5.9",
     "webpack": "^3.0.0",
     "webpack-dev-middleware": "^1.11.0",
-    "webpack-hot-middleware": "^2.18.0"
+    "webpack-hot-middleware": "^2.18.0",
+    "@storybook/react": "^3.1.8",
+    "draftjs-to-html": "^0.7.2",
+    "draftjs-to-markdown": "^0.4.2",
+    "html-to-draftjs": "^0.1.0-beta7"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -54,5 +58,9 @@
     "immutable": "^4.0.0-rc.1",
     "prop-types": "^15.5.10"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
 }

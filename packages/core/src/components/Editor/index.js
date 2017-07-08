@@ -31,7 +31,7 @@ import getMentionDecorators from '../../decorators/Mention';
 import getHashtagDecorator from '../../decorators/HashTag';
 import getBlockRenderFunc from '../../renderer';
 import defaultToolbar from '../../config/defaultToolbar';
-import localeTranslations from '../../i18n';
+import enTranslations from '../../en';
 import './styles.css';
 import '../../../css/Draft.css';
 
@@ -86,7 +86,7 @@ export default class WysiwygEditor extends Component {
     toolbarOnFocus: false,
     toolbarHidden: false,
     stripPastedStyles: false,
-    localization: { locale: 'en', translations: {} },
+    localization: { locale: 'en', translations: enTranslations },
     customDecorators: [],
   }
 
@@ -390,7 +390,7 @@ export default class WysiwygEditor extends Component {
       modalHandler: this.modalHandler,
       editorState,
       onChange: this.onChange,
-      translations: { ...localeTranslations[locale || newLocale], ...translations },
+      translations: translations || enTranslations,
     };
 
     return (

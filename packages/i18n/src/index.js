@@ -6,10 +6,11 @@ import pt from './pt';
 import ko from './ko';
 
 module.exports = {
-  en,
-  fr,
-  zh,
-  ru,
-  pt,
-  ko,
+  translations: {en,
+    fr,
+    zh,
+    ru,
+    pt,
+    ko,
+  }
 };

@@ -9,9 +9,6 @@
   },
   "author": "Jyoti Puri",
   "devDependencies": {
-    "draftjs-to-html": "^0.7.2",
-    "draftjs-to-markdown": "^0.4.2",
-    "html-to-draftjs": "^0.1.0-beta7",
     "@storybook/react": "^3.1.8"
   },
   "peerDependencies": {
