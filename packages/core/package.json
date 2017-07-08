@@ -1,0 +1,34 @@
+{
+  "name": "react-draft-wysiwyg",
+  "version": "1.10.1",
+  "description": "A wysiwyg on top of DraftJS.",
+  "main": "dist/react-draft-wysiwyg.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpuri/react-draft-wysiwyg.git"
+  },
+  "author": "Jyoti Puri",
+  "devDependencies": {
+    "draftjs-to-html": "^0.7.2",
+    "draftjs-to-markdown": "^0.4.2",
+    "html-to-draftjs": "^0.1.0-beta7",
+    "@storybook/react": "^3.1.8"
+  },
+  "peerDependencies": {
+    "draft-js": "^0.10.x",
+    "react": "0.13.x || 0.14.x || ^15.0.0-0 || 15.x.x",
+    "react-dom": "0.13.x || 0.14.x || ^15.0.0-0 || 15.x.x"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:webpack": "cross-env NODE_ENV=production webpack --config config/webpack.prod.config.js",
+    "build": "npm run clean && npm run build:webpack",
+    "test": "cross-env BABEL_ENV=test mocha --compilers js:config/test-compiler.js config/test-setup.js js/**/*Test.js",
+    "lint": "eslint js",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2",
+    "check": "npm run lint && npm run flow",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "license": "MIT"
+}
