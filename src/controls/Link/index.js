@@ -57,11 +57,11 @@ class Link extends Component {
     this.signalExpanded = !this.state.expanded;
   };
 
-  onChange = (action, title, target, taret) => {
+  onChange = (action, title, target, targetOption) => {
     if (action === 'link') {
       const links = linkify.match(target);
       const linkifiedTarget = links && links[0] ? links[0].url : '';
-      this.addLink(title, linkifiedTarget, taret);
+      this.addLink(title, linkifiedTarget, targetOption);
     } else {
       this.removeLink();
     }
@@ -76,7 +76,7 @@ class Link extends Component {
       currentValues.link = {};
       const entityRange = currentEntity && getEntityRange(editorState, currentEntity);
       currentValues.link.target = currentEntity && contentState.getEntity(currentEntity).get('data').url;
-      currentValues.link.taret = currentEntity && contentState.getEntity(currentEntity).get('data').taret;
+      currentValues.link.targetOption = currentEntity && contentState.getEntity(currentEntity).get('data').targetOption;
       currentValues.link.title = (entityRange && entityRange.text);
     }
     currentValues.selectionText = getSelectionText(editorState);
@@ -130,7 +130,7 @@ class Link extends Component {
     }
     const entityKey = editorState
       .getCurrentContent()
-      .createEntity('LINK', 'MUTABLE', { url: linkTarget, taret: linkTargetOption })
+      .createEntity('LINK', 'MUTABLE', { url: linkTarget, targetOption: linkTargetOption })
       .getLastCreatedEntityKey();
 
     let contentState = Modifier.replaceText(

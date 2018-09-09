@@ -76,7 +76,7 @@ class LayoutComponent extends Component {
     this.setState({
       showModal: true,
       linkTarget: (link && link.target) || '',
-      linkTargetOption: (link && link.target) || linkTargetOption,
+      linkTargetOption: (link && link.targetOption) || linkTargetOption,
       linkTitle: (link && link.title) || selectionText,
     });
   }
@@ -88,7 +88,7 @@ class LayoutComponent extends Component {
     this.setState({
       showModal: true,
       linkTarget: link && link.target,
-      linkTargetOption: (link && link.target) || linkTargetOption,
+      linkTargetOption: (link && link.targetOption) || linkTargetOption,
       linkTitle: (link && link.title) || selectionText,
     });
   }
