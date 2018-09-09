@@ -57,11 +57,11 @@ class Link extends Component {
     this.signalExpanded = !this.state.expanded;
   };
 
-  onChange = (action, title, target, targetOption) => {
+  onChange = (action, title, url, target) => {
     if (action === 'link') {
-      const links = linkify.match(target);
+      const links = linkify.match(url);
       const linkifiedTarget = links && links[0] ? links[0].url : '';
-      this.addLink(title, linkifiedTarget, targetOption);
+      this.addLink(title, linkifiedTarget, target);
     } else {
       this.removeLink();
     }
@@ -75,8 +75,8 @@ class Link extends Component {
     if (currentEntity && (contentState.getEntity(currentEntity).get('type') === 'LINK')) {
       currentValues.link = {};
       const entityRange = currentEntity && getEntityRange(editorState, currentEntity);
-      currentValues.link.target = currentEntity && contentState.getEntity(currentEntity).get('data').url;
-      currentValues.link.targetOption = currentEntity && contentState.getEntity(currentEntity).get('data').targetOption;
+      currentValues.link.url = currentEntity && contentState.getEntity(currentEntity).get('data').url;
+      currentValues.link.target = currentEntity && contentState.getEntity(currentEntity).get('data').target;
       currentValues.link.title = (entityRange && entityRange.text);
     }
     currentValues.selectionText = getSelectionText(editorState);
@@ -116,7 +116,7 @@ class Link extends Component {
     }
   };
 
-  addLink: Function = (linkTitle, linkTarget, linkTargetOption): void => {
+  addLink: Function = (linkTitle, url, target): void => {
     const { editorState, onChange } = this.props;
     const { currentEntity } = this.state;
     let selection = editorState.getSelection();
@@ -130,7 +130,7 @@ class Link extends Component {
     }
     const entityKey = editorState
       .getCurrentContent()
-      .createEntity('LINK', 'MUTABLE', { url: linkTarget, targetOption: linkTargetOption })
+      .createEntity('LINK', 'MUTABLE', { url, target })
       .getLastCreatedEntityKey();
 
     let contentState = Modifier.replaceText(
